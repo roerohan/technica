@@ -19,13 +19,13 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext build) {
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 16, horizontal:60),
+        padding: EdgeInsets.symmetric(vertical: 6, horizontal:50),
         child: new Center(
           widthFactor: 2,
           
           child:new TextFormField(
             
-            cursorColor: Colors.blue,
+            cursorColor: myColor,
               autofocus: false,
               obscureText: obscure,
               controller: tedit,
@@ -35,7 +35,7 @@ class MyTextField extends StatelessWidget {
                 //counterStyle: TextStyle(color: Colors.white),
                 hintText: _text,
                 contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                
+                hintStyle: TextStyle(color: myColor)
               ),
             )));
   }

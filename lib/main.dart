@@ -5,6 +5,8 @@ import 'create_account.dart';
 
 void main() => runApp(MyApp());
 
+Color c=Color.fromRGBO(184, 184, 184, 100);
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -47,27 +49,27 @@ class HomePageGui extends StatelessWidget {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-     // backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
-        body: Center(
-            child: Container(
-      child: Column(
-        children: <Widget>[
-          SizedBox(
-            width: 100,
-            height:300,
-          ),
-          new MyTextField(Color.fromRGBO(184, 184, 184, 100), 'email', email, false),
-          new MyTextField(Colors.white, 'Password', pswd, true),
-          
-           new MyButton('LOG IN', Color.fromRGBO(184, 184, 184, 100), (){
-
-Navigator.push(context, MaterialPageRoute(builder: (context)=>LogInPage()));
-
-           })
-          
-        ],
-      ),
-    ))
+        backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
+        body: SingleChildScrollView(
+          child: Center(
+              child: Container(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  width: 100,
+                  height: 300,
+                ),
+                new MyTextField(
+                    c, 'email', email, false),
+                new MyTextField(c, 'Password', pswd, true),
+                new MyButton('LOG IN', Color.fromRGBO(184, 184, 184, 100), () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LogInPage()));
+                })
+              ],
+            ),
+          )),
+        )
 
         // This trailing comma makes auto-formatting nicer for build methods.
         );
