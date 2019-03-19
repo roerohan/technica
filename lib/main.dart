@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 TextEditingController email;
 TextEditingController pswd;
 
@@ -47,31 +46,27 @@ class HomePageGui extends StatelessWidget {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        
+      backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
         body: Center(
             child: Container(
-          child: Column(
-            children: <Widget>[
-              
-              new MyTextField(Colors.white,'Password', email),
-              new MyTextField(Colors.white,'Password', pswd),
-              
-              new Center(
-                child: new Container(
-                    decoration: new BoxDecoration(
-                      color: Colors.purple,
-                    ),
-                    ),
-              ),
-             
-             
-             
-             
-             
-             
-            ],
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            width: 100,
+            height:300,
           ),
-        ))
+          new MyTextField(Color.fromRGBO(184, 184, 184, 100), 'email', email, false),
+          new MyTextField(Colors.white, 'Password', pswd, true),
+          new Center(
+            child: new Container(
+              decoration: new BoxDecoration(
+                color: Colors.purple,
+              ),
+            ),
+          ),
+        ],
+      ),
+    ))
 
         // This trailing comma makes auto-formatting nicer for build methods.
         );

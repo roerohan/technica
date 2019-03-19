@@ -5,13 +5,15 @@ class MyTextField extends StatelessWidget {
   
   TextEditingController tedit;
   String _text;
+  bool obscure;
   Color myColor;
   MyTextField( Color color,String text,
-      TextEditingController controller) {
+      TextEditingController controller, bool ob) {
    
    _text=text;
     myColor = color;
     tedit = controller;
+    obscure=ob;
   }
 
   @override
@@ -22,10 +24,13 @@ class MyTextField extends StatelessWidget {
           widthFactor: 2,
           
           child:new TextFormField(
+            cursorColor: Colors.white,
               autofocus: false,
-              obscureText: true,
+              obscureText: obscure,
               controller: tedit,
+              
               decoration: InputDecoration(
+                //counterStyle: TextStyle(color: Colors.white),
                 hintText: _text,
                 contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                 
