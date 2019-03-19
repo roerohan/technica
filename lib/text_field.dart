@@ -17,8 +17,11 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext build) {
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 16),
-        child: new TextFormField(
+        padding: EdgeInsets.symmetric(vertical: 16, horizontal:60),
+        child: new Center(
+          widthFactor: 2,
+          
+          child:new TextFormField(
               autofocus: false,
               obscureText: true,
               controller: tedit,
@@ -27,6 +30,6 @@ class MyTextField extends StatelessWidget {
                 contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                 
               ),
-            ));
+            )));
   }
 }

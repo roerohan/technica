@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
 }
 
 
-TextEditingController t;
+TextEditingController email;
+TextEditingController pswd;
 
 class HomePageGui extends StatelessWidget {
   String title;
@@ -46,17 +47,14 @@ class HomePageGui extends StatelessWidget {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(title),
-        ),
+        
         body: Center(
             child: Container(
           child: Column(
             children: <Widget>[
               
-              new MyTextField(Colors.white,'Password', t),
+              new MyTextField(Colors.white,'Password', email),
+              new MyTextField(Colors.white,'Password', pswd),
               
               new Center(
                 child: new Container(
@@ -70,8 +68,7 @@ class HomePageGui extends StatelessWidget {
              
              
              
-              new MyButton('Doctor', Colors.blue, () {}),
-              new MyButton('Patient', Colors.blue, () {})
+             
             ],
           ),
         ))
