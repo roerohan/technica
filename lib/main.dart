@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'button.dart';
+import 'text_field.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+TextEditingController t;
+
 class HomePageGui extends StatelessWidget {
   String title;
   //MyButton b = new MyButton('Scan Barcode', Colors.blue, goToScanScreen);
@@ -52,8 +56,7 @@ class HomePageGui extends StatelessWidget {
           child: Column(
             children: <Widget>[
               
-              
-              
+              new MyTextField(Colors.white,'Password', t),
               
               new Center(
                 child: new Container(
