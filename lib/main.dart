@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'button.dart';
 import 'text_field.dart';
+import 'create_account.dart';
 
 void main() => runApp(MyApp());
 
@@ -46,7 +47,7 @@ class HomePageGui extends StatelessWidget {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
+     // backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
         body: Center(
             child: Container(
       child: Column(
@@ -57,13 +58,13 @@ class HomePageGui extends StatelessWidget {
           ),
           new MyTextField(Color.fromRGBO(184, 184, 184, 100), 'email', email, false),
           new MyTextField(Colors.white, 'Password', pswd, true),
-          new Center(
-            child: new Container(
-              decoration: new BoxDecoration(
-                color: Colors.purple,
-              ),
-            ),
-          ),
+          
+           new MyButton('LOG IN', Color.fromRGBO(184, 184, 184, 100), (){
+
+Navigator.push(context, MaterialPageRoute(builder: (context)=>LogInPage()));
+
+           })
+          
         ],
       ),
     ))

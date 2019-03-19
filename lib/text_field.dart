@@ -24,12 +24,14 @@ class MyTextField extends StatelessWidget {
           widthFactor: 2,
           
           child:new TextFormField(
-            cursorColor: Colors.white,
+            
+            cursorColor: Colors.blue,
               autofocus: false,
               obscureText: obscure,
               controller: tedit,
               
               decoration: InputDecoration(
+                
                 //counterStyle: TextStyle(color: Colors.white),
                 hintText: _text,
                 contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
