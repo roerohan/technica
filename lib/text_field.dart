@@ -19,17 +19,21 @@ class MyTextField extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 6, horizontal: 50),
         child: new Center(
             widthFactor: 2,
-            child: new TextFormField(
-              cursorColor: myColor,
-              autofocus: false,
-              obscureText: obscure,
-              controller: tedit,
-              decoration: InputDecoration(
-                  //fillColor: Colors.white,
-                  //counterStyle: TextStyle(color: Colors.white),
-                  hintText: _text,
-                  contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                  hintStyle: TextStyle(color: myColor)),
+            child: new Theme(
+              data: new ThemeData(
+                  primaryColor: Colors.white, primaryColorDark: myColor, hintColor: myColor),
+              child: TextField(
+                cursorColor: myColor,
+                autofocus: false,
+                obscureText: obscure,
+                controller: tedit,
+                decoration: InputDecoration(
+                    //fillColor: Colors.white,
+                    //counterStyle: TextStyle(color: Colors.white),
+                    hintText: _text,
+                    contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+                    hintStyle: TextStyle(color: myColor)),
+              ),
             )));
   }
 }
