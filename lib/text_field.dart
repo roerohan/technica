@@ -21,7 +21,7 @@ class MyTextField extends StatelessWidget {
             widthFactor: 2,
             child: new Theme(
               data: new ThemeData(
-                  primaryColor: Colors.white, primaryColorDark: myColor, hintColor: myColor),
+                  primaryColor: Colors.white, primaryColorDark: Color.fromRGBO(239, 239, 239, 1.0), hintColor: Color.fromRGBO(239, 239, 239, 1.0)),
               child: TextField(
                 cursorColor: myColor,
                 autofocus: false,
@@ -31,8 +31,8 @@ class MyTextField extends StatelessWidget {
                     //fillColor: Colors.white,
                     //counterStyle: TextStyle(color: Colors.white),
                     hintText: _text,
-                    contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                    hintStyle: TextStyle(color: myColor)),
+                    contentPadding: EdgeInsets.fromLTRB(0.0, 10.0, 20.0, 10.0),
+                    hintStyle: TextStyle(color: Color.fromRGBO(239, 239, 239, 1.0), fontSize: 20.0,)),
               ),
             )));
   }
