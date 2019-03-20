@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class MyButton extends StatelessWidget {
  String buttonTitle;
  Function myFunc;
-Color myColor;
-  MyButton(String bname,Color c , Function f) {
+Color backgroundColor;
+Color textColor;
+  MyButton(String bname,Color backCol , Color textCol, Function f) {
     buttonTitle = bname;
     myFunc=f;
-    myColor=c;
+    backgroundColor=backCol;
+    textColor=textCol;
   }
 
   @override
@@ -21,9 +23,9 @@ Color myColor;
             //insert functionality here
            myFunc();
           },
-          padding: EdgeInsets.all(12),
-          color: myColor,
-          child: Text(buttonTitle, style: TextStyle(color: Colors.white))),
+          padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 12.0),
+          color: backgroundColor,
+          child: Text(buttonTitle, style: TextStyle(color: textColor, fontSize: 20.0))),
     );
   }
 }
