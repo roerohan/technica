@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'text_field.dart';
 import 'button.dart';
+import 'home_page.dart';
 import 'qrcode.dart';
 
 TextEditingController name, email, pswd, confPswd;
@@ -39,7 +40,7 @@ class LogInPage extends StatelessWidget {
                   // if (pswd.text == confPswd.text) {
                   //   //Navigator.push(context, MaterialPageRoute(builder: (context)=>))
                   // }
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>QrRoute()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
 
                 }),
               ],
