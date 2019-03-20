@@ -20,7 +20,7 @@ Color myColor;
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => QrRoute()),
+              MaterialPageRoute(builder: (context) => QrPage()),
             );
           },
           padding: EdgeInsets.all(12),

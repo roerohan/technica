@@ -15,19 +15,6 @@ class _HomeState extends State<Home> {
   String patient_id = "5c91697ed534cc68288585b2";
   int _selectIndex = 0;
 
-  Object _getPatient() async {
-    String url = "https://technicajalapeno.herokuapp.com/get-patient";
-    http.Response res = await http.post(Uri.encodeFull(url), body: {
-      "patient_id": patient_id,
-    }); // post api call
-    print(res.body);
-    return res;
-  }
-
-/*
-
-*/
-
   List<Widget> icons = [
     new Image.asset(
       "assets/QRcode.png",
@@ -72,10 +59,6 @@ class _HomeState extends State<Home> {
           width: 30,
           height: 30,
         );
-          if(i==3)
-          {
-            _getPatient();
-          }
       }
     });
   }
