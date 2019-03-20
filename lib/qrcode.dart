@@ -34,7 +34,7 @@ Future<String> str =  BarcodeScanner.scan();
         child: RaisedButton(
           onPressed: () async {
             print("STRING");
-print(await str);
+            print(await str);
            // print(await futureString);
             Navigator.pop(context);
           },

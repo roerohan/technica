@@ -40,7 +40,7 @@ class LogInPage extends StatelessWidget {
                   // if (pswd.text == confPswd.text) {
                   //   //Navigator.push(context, MaterialPageRoute(builder: (context)=>))
                   // }
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>QrRoute()));
 
                 }),
               ],
