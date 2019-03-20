@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'qrcode_generate.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'dart:async';
 
 class Home extends StatefulWidget {
   @override
@@ -9,8 +12,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String patient_id = "constant";
+  String patient_id = "5c91697ed534cc68288585b2";
   int _selectIndex = 0;
+
+  Object _getPatient() async {
+    String url = "https://technicajalapeno.herokuapp.com/get-patient";
+    http.Response res = await http.post(Uri.encodeFull(url), body: {
+      "patient_id": patient_id,
+    }); // post api call
+    print(res.body);
+    return res;
+  }
+
+/*
+
+*/
+
   List<Widget> icons = [
     new Image.asset(
       "assets/QRcode.png",
@@ -55,6 +72,10 @@ class _HomeState extends State<Home> {
           width: 30,
           height: 30,
         );
+          if(i==3)
+          {
+            _getPatient();
+          }
       }
     });
   }
@@ -68,9 +89,7 @@ class _HomeState extends State<Home> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            stops: [
-              0,0.5,0.5,1
-            ],
+            stops: [0, 0.5, 0.5, 1],
             colors: <Color>[
               Color.fromARGB(255, 151, 202, 219),
               Color.fromARGB(255, 151, 202, 219),
@@ -81,7 +100,8 @@ class _HomeState extends State<Home> {
         ),
         child: Center(
           child: Card(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(40.0)),
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: QrShow(
