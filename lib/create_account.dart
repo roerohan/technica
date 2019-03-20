@@ -35,7 +35,7 @@ class LogInPage extends StatelessWidget {
 
                   },
                 ),
-                new MyButton('SIGN UP', c, () {
+                new MyButton('SIGN UP', c, Color.fromRGBO(0,0,0,1.0), () {
                   if (pswd.text == confPswd.text) {
                     //Navigator.push(context, MaterialPageRoute(builder: (context)=>))
                   }

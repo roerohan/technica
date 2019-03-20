@@ -49,7 +49,7 @@ class HomePageGui extends StatelessWidget {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
+        backgroundColor: const Color.fromRGBO(0, 27, 72, 1.0),
         body: SingleChildScrollView(
           child: Center(
               child: Container(
@@ -60,12 +60,21 @@ class HomePageGui extends StatelessWidget {
                   height: 300,
                 ),
                 new MyTextField(
-                    c, 'email', email, false),
-                new MyTextField(c, 'Password', pswd, true),
-                new MyButton('LOG IN', Color.fromRGBO(184, 184, 184, 100), () {
+                    c, 'EMAIL', email, false),
+                new MyTextField(c, 'PASSWORD', pswd, true),
+                new Container(
+                  padding: EdgeInsets.symmetric(horizontal: 50),
+                  child:Row(
+                  children: [
+                  Expanded(
+                    child: new Text("FORGOT PASSWORD", textAlign:TextAlign.right,style: TextStyle(color: Color.fromRGBO(107,107,107, 1.0)))
+                )])),
+                new MyButton('LOG IN', Color.fromRGBO(239, 239, 239, 1.0), Color.fromRGBO(0, 27, 72, 1.0),() {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LogInPage()));
-                })
+                }),
+                SizedBox(height: 100),
+                Text("DON'T HAVE AN ACCOUNT? SIGN UP", style: TextStyle(color: Color.fromRGBO(239,239,239,1.0)))
               ],
             ),
           )),
