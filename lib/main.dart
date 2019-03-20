@@ -5,7 +5,7 @@ import 'create_account.dart';
 
 void main() => runApp(MyApp());
 
-Color c=Color.fromRGBO(184, 184, 184, 100);
+Color c=Color.fromRGBO(184, 184, 184, 1.0);
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
       ),
       home: HomePageGui('CSI-VIT Xapp'),
     );
@@ -49,7 +48,7 @@ class HomePageGui extends StatelessWidget {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(0, 27, 72, 1.0),
+        backgroundColor: const Color.fromARGB(255, 0, 27, 72),
         body: SingleChildScrollView(
           child: Center(
               child: Container(
