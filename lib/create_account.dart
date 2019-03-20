@@ -11,7 +11,7 @@ class LogInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
+        backgroundColor: const Color.fromRGBO(0, 27, 72, 100),
         body: SingleChildScrollView(
           child: Center(
             child: Column(

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CSI-VIT Xapp',
+      title: 'Doctor Doctor',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
       ),
-      home: HomePageGui('CSI-VIT Xapp'),
+      home: HomePageGui('Doctor Doctor'),
     );
   }
 }
@@ -69,11 +69,17 @@ class HomePageGui extends StatelessWidget {
                     child: new Text("FORGOT PASSWORD", textAlign:TextAlign.right,style: TextStyle(color: Color.fromRGBO(107,107,107, 1.0)))
                 )])),
                 new MyButton('LOG IN', Color.fromRGBO(239, 239, 239, 1.0), Color.fromRGBO(0, 27, 72, 1.0),() {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LogInPage()));
+                  //Navigator.push(context,
+                  //    MaterialPageRoute(builder: (context) => LogInPage()));
                 }),
                 SizedBox(height: 100),
-                Text("DON'T HAVE AN ACCOUNT? SIGN UP", style: TextStyle(color: Color.fromRGBO(239,239,239,1.0)))
+                Text("DON'T HAVE AN ACCOUNT?", style: TextStyle(color: Color.fromRGBO(239,239,239,.7)),),
+                new MyButton("SIGN UP",Color.fromRGBO(239, 239, 239, 1.0), Color.fromRGBO(0, 27, 72, .7),(){
+                    
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LogInPage()));
+
+                } ),
               ],
             ),
           )),
