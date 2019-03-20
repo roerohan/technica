@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'button.dart';
 import 'text_field.dart';
 import 'create_account.dart';
-
+import 'home_page.dart';
 void main() => runApp(MyApp());
 
 Color c=Color.fromRGBO(184, 184, 184, 1.0);
@@ -69,8 +69,8 @@ class HomePageGui extends StatelessWidget {
                     child: new Text("FORGOT PASSWORD", textAlign:TextAlign.right,style: TextStyle(color: Color.fromRGBO(107,107,107, 1.0)))
                 )])),
                 new MyButton('LOG IN', Color.fromRGBO(239, 239, 239, 1.0), Color.fromRGBO(0, 27, 72, 1.0),() {
-                  //Navigator.push(context,
-                  //    MaterialPageRoute(builder: (context) => LogInPage()));
+                  Navigator.push(context,
+                     MaterialPageRoute(builder: (context) => Home()));
                 }),
                 SizedBox(height: 100),
                 Text("DON'T HAVE AN ACCOUNT?", style: TextStyle(color: Color.fromRGBO(239,239,239,.7)),),
