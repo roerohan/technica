@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'text_field.dart';
 import 'button.dart';
+import 'qrcode.dart';
 
 TextEditingController name, email, pswd, confPswd;
 Color c = Color.fromRGBO(184, 184, 184, 100);
@@ -31,13 +32,15 @@ class LogInPage extends StatelessWidget {
                 Checkbox(
                   value: isDoc,
                   onChanged: (bool val) {
-                  
+
                   },
                 ),
                 new MyButton('SIGN UP', c, () {
                   if (pswd.text == confPswd.text) {
                     //Navigator.push(context, MaterialPageRoute(builder: (context)=>))
                   }
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>QrRoute()));
+
                 }),
               ],
             ),
