@@ -24,7 +24,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   qrcode_reader: ^0.4.4
-
+  qr_flutter: ^2.0.0+51
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -71,3 +71,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+  assets:
+    - assets/
