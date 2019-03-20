@@ -18,7 +18,9 @@ class QrRoute extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          onPressed: () {
+          onPressed: () async {
+            print("STRING");
+            print(await futureString);
             Navigator.pop(context);
           },
           child: Text('Go back!'),

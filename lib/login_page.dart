@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
       body: new Column(
         children: <Widget>[
 
-          new MyButton('LOG IN', Colors.white, (){})
+          new MyButton('LOG IN', Colors.white, Colors.white,(){})
 
         ],
       ),
