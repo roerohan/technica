@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'doctorafterqr.dart';
 void main() {
   runApp(new MaterialApp(home: new MyApp()));
 }
@@ -71,4 +70,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
