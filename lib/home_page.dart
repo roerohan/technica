@@ -62,13 +62,31 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: QrShow(
-              patient_id: patient_id,
+      body: Container(
+        alignment: Alignment.bottomCenter,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [
+              0,0.5,0.5,1
+            ],
+            colors: <Color>[
+              Color.fromARGB(255, 151, 202, 219),
+              Color.fromARGB(255, 151, 202, 219),
+              Colors.white,
+              Colors.white,
+            ],
+          ),
+        ),
+        child: Center(
+          child: Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: QrShow(
+                patient_id: patient_id,
+              ),
             ),
           ),
         ),

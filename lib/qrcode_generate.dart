@@ -8,7 +8,7 @@ class QrShow extends StatelessWidget{
   Widget build(BuildContext context) {
     return new QrImage(
       data:patient_id,
-      size:200.0,
+      size:250.0,
     );
   }
 }
